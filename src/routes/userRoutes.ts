@@ -7,8 +7,4 @@ const router = Router();
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
-router.get('/protected', protect, (req, res) => {
-    res.json({ message: 'This is a protected route', user: req.user });
-});
-
 export { router as userRoutes };
