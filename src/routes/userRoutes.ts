@@ -12,6 +12,6 @@ router.get('/protected', protect, (req:IReqAuth, res) => {
     res.json({ message: 'This is a protected route', user: req.user });
 });
 
-router.get('/users', protect, getUsers);
+router.get('/', protect, getUsers);
 
 export { router as userRoutes };
